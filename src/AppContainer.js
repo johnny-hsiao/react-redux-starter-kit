@@ -1,6 +1,6 @@
-import React, { PropTypes } from 'react'
-import { Router } from 'react-router'
-import { Provider } from 'react-redux'
+import React, { PropTypes } from 'react';
+import { Router } from 'react-router';
+import { Provider } from 'react-redux';
 
 class AppContainer extends React.Component {
   static propTypes = {
@@ -19,8 +19,8 @@ class AppContainer extends React.Component {
           <Router history={history} children={routes} key={routerKey} />
         </div>
       </Provider>
-    )
+    );
   }
 }
 
-export default AppContainer
+export default AppContainer;

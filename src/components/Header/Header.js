@@ -1,18 +1,29 @@
-import React from 'react'
-import { IndexLink, Link } from 'react-router'
-import classes from './Header.scss'
+import React from 'react';
+import { IndexLink, Link } from 'react-router';
+import AppBar from 'material-ui/AppBar';
+import classes from './Header.scss';
 
 export const Header = () => (
-  <div>
-    <h1>React Redux Starter Kit</h1>
-    <IndexLink to='/' activeClassName={classes.activeRoute}>
-      Home
-    </IndexLink>
-    {' · '}
-    <Link to='/counter' activeClassName={classes.activeRoute}>
-      Counter
-    </Link>
-  </div>
-)
+  <AppBar 
+    iconElementLeft={
+      <IndexLink 
+        to='/' 
+        activeClassName={classes.activeRoute}
+        className={classes.route}
+      >
+        Home
+      </IndexLink>
+    }
+    iconElementRight={
+      <Link 
+        to='/counter' 
+        activeClassName={classes.activeRoute}
+        className={classes.route}
+      >
+        Counter
+      </Link>
+    }
+  />
+);
 
-export default Header
+export default Header;
